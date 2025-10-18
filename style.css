@@ -1,33 +1,36 @@
 body {
   margin: 0;
+  padding: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(10, 10, 25, 0.6);
-  backdrop-filter: blur(20px) saturate(180%);
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, rgba(10,10,30,0.85), rgba(20,20,50,0.85));
+  backdrop-filter: blur(20px);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
 }
 
 #app {
-  background: rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 20px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
   width: 90%;
   max-width: 400px;
-  text-align: center;
-  box-shadow: 0 0 40px rgba(0,0,0,0.3);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
 }
 
 button {
+  margin-top: 15px;
   background: rgba(255,255,255,0.2);
   border: none;
   color: white;
   padding: 10px 20px;
   border-radius: 12px;
+  font-size: 16px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 button:hover {
   background: rgba(255,255,255,0.3);
@@ -37,33 +40,34 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 10px;
   margin-top: 10px;
 }
 .gift {
   background: rgba(255,255,255,0.15);
   padding: 10px;
-  border-radius: 12px;
-  margin: 5px;
+  border-radius: 10px;
   min-width: 80px;
+  text-align: center;
 }
 
 #casePopup {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   backdrop-filter: blur(15px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.hidden { display: none; }
-
+.hidden {
+  display: none;
+}
 .popup {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.1);
   border-radius: 20px;
   padding: 30px;
   text-align: center;
-  box-shadow: 0 0 30px rgba(255,255,255,0.1);
+  box-shadow: 0 0 30px rgba(255,255,255,0.15);
 }
-
