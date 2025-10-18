@@ -1,5 +1,6 @@
-const tg = window.Telegram.WebApp;
-tg.expand(); // make it fullscreen in Telegram
+// Try to use Telegram WebApp if available
+const tg = window.Telegram?.WebApp || {};
+if (tg.expand) tg.expand();
 
 let stars = parseInt(localStorage.getItem("stars")) || 10;
 let inventory = JSON.parse(localStorage.getItem("inventory")) || [];
@@ -34,9 +35,10 @@ renderInventory();
 
 openCaseBtn.onclick = () => {
   if (stars < 5) {
-    tg.showAlert("Not enough stars!");
+    alert("Not enough stars!");
     return;
   }
+
   stars -= 5;
   starCount.textContent = stars;
   localStorage.setItem("stars", stars);
